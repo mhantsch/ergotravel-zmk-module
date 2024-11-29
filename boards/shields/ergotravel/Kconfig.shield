@@ -1,0 +1,10 @@
+# Copyright (c) 2024 Maximilian Hantsch
+# SPDX-License-Identifier: MIT
+
+# No whitespace after the comma or in your part name!
+config SHIELD_ERGOTRAVEL_LEFT
+    def_bool $(shields_list_contains,ergotravel_left)
+
+# No whitespace after the comma or in your part name!
+config SHIELD_ERGOTRAVEL_RIGHT
+    def_bool $(shields_list_contains,ergotravel_right)

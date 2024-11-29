@@ -1,0 +1,11 @@
+file_format: "1"
+id: ergotravel
+name: ErgoTravel
+type: shield
+url: https://github.com/jpconstantineau/ErgoTravel
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - ergotravel_left
+  - ergotravel_right
