@@ -40,8 +40,8 @@
             , <&key_physical_attrs 100 100  300  200       0     0     0>
             , <&key_physical_attrs 100 100  400  213       0     0     0>
             , <&key_physical_attrs 100 100  500  225       0     0     0>
-            , <&key_physical_attrs 100 100  650  300       0     0     0>
-            , <&key_physical_attrs 100 100  850  300       0     0     0>
+            , <&key_physical_attrs 100 100  600  300    3000   700   350>
+            , <&key_physical_attrs 100 100  900  300   33000   900   350>
             , <&key_physical_attrs 100 100 1000  225       0     0     0>
             , <&key_physical_attrs 100 100 1100  213       0     0     0>
             , <&key_physical_attrs 100 100 1200  200       0     0     0>
@@ -52,10 +52,10 @@
             , <&key_physical_attrs 100 100  100  325       0     0     0>
             , <&key_physical_attrs 100 100  200  313       0     0     0>
             , <&key_physical_attrs 100 100  300  300       0     0     0>
-            , <&key_physical_attrs 100 100  550  400       0     0     0>
-            , <&key_physical_attrs 100 100  650  400       0     0     0>
-            , <&key_physical_attrs 100 100  850  400       0     0     0>
-            , <&key_physical_attrs 100 100  950  400       0     0     0>
+            , <&key_physical_attrs 125 100  425  325    1500   487   375>
+            , <&key_physical_attrs 100 100  600  400    3000   700   350>
+            , <&key_physical_attrs 100 100  900  400   33000   900   350>
+            , <&key_physical_attrs 125 100 1050  325   34500  1112   375>
             , <&key_physical_attrs 100 100 1200  300       0     0     0>
             , <&key_physical_attrs 100 100 1300  313       0     0     0>
             , <&key_physical_attrs 100 100 1400  325       0     0     0>
@@ -65,6 +65,8 @@
 
     position_map {
         compatible = "zmk,physical-layout-position-map";
+
+        complete;
 
         layout {
             physical-layout = <&layout>;
