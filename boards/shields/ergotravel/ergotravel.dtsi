@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "ergotravel-layouts.dtsi"
+// #include "ergotravel-layouts.dtsi"
 
 
 / {
@@ -47,7 +47,7 @@
 
 / {
     chosen {
-        zmk,physical-layout = &layout;
+        //zmk,physical-layout = &layout;
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &default_transform;
     };
