@@ -144,10 +144,14 @@
             display-name = "Maxtend";
     
             bindings = <
-                &kp TAB   &kp ESC   &none     &trans    &trans    &trans    &kp MINUS   &kp EQUAL   &kp PG_UP &kp HOME  &kp UP     &kp END   &kp DEL   &kp INS
-                &kp CAPS  &kp LALT  &none     &kp LSHFT &kp LCTRL &kp LGUI  &kp LBKT    &kp RBKT    &kp PG_DN &kp LEFT  &kp DOWN   &kp RIGHT &kp BSPC  &kp ENTER
-                &kp LSHFT &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &trans    &kp SPACE   &kp SPACE   &trans    &trans    &trans     &trans    &kp K_APP &kp RSHFT
-                &kp LCTRL &kp LGUI  &kp LALT  &mo ADJ   &mo LOW   &kp ENTER &none       &none       LC(ENTER) &mo RSE   &mo FUN    &kp RALT  &kp RGUI  &kp RCTRL
+//                &kp TAB   &kp ESC   &none     &trans    &trans    &trans    &kp MINUS   &kp EQUAL   &kp PG_UP &kp HOME  &kp UP     &kp END   &kp DEL   &kp INS
+//                &kp CAPS  &kp LALT  &none     &kp LSHFT &kp LCTRL &kp LGUI  &kp LBKT    &kp RBKT    &kp PG_DN &kp LEFT  &kp DOWN   &kp RIGHT &kp BSPC  &kp ENTER
+//                &kp LSHFT &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &trans    &kp SPACE   &kp SPACE   &trans    &trans    &trans     &trans    &kp K_APP &kp RSHFT
+//                &kp LCTRL &kp LGUI  &kp LALT  &mo ADJ   &mo LOW   &kp ENTER &none       &none       LC(ENTER) &mo RSE   &mo FUN    &kp RALT  &kp RGUI  &kp RCTRL
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER 
             >;
         };
 
