@@ -19,13 +19,16 @@
 #define NTB 13      // NumTab
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <LOW RSE>;
-            then-layer = <ADJ>;
-        };
-    };
+
+// This keymap has a distinct ADJUST button, so tri-layer functionality is not needed.
+//
+//    conditional_layers {
+//        compatible = "zmk,conditional-layers";
+//        tri_layer {
+//            if-layers = <LOW RSE>;
+//            then-layer = <ADJ>;
+//        };
+//    };
 
     keymap {
         compatible = "zmk,keymap";
