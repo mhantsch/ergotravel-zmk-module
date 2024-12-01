@@ -1,21 +1,169 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+
+#define QTY 0       // QWERTY
+#define QTY_HR 1    // QWERTY w/ HRM
+#define CMK 2       // Colemak
+#define CMK_HR 3    // Colemak w/ HRM
+#define CMR 4       // Colemak Reversed
+#define LOW 5       // Lower
+#define RSE 6       // Raise
+#define ADJ 7       // Adjust
+#define FUN 8       // Function/Media
+#define MAX 9       // Maxtend
+#define MSE 10      // Mouse
+#define NSP 11      // NumSpace
+#define NTB 12      // NumTab
+
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer { // Layer 0
-            // -------------------------------------
-            // |     Z     |     M     |     K     |
-            // |     A     |     B     |     C     |
-            // |     D     |     E     |     F     |
+        qwerty_layer { // Layer 0 (default_layer)
+            display-name = "QWERTY"
+    
             bindings = <
-                &kp N1    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp MINUS   &kp PLUS    &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
-                &kp N2    &kp A    &kp S    &kp D    &kp F    &kp G    &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
-                &kp N3    &kp Z    &kp X    &kp C    &kp V    &kp B    &kp LBRC    &kp RBRC    &kp K     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp ENTER 
-                &kp N4    &kp N5   &kp N6   &kp N7   &kp N8   &kp N9   &kp LT      &kp GT      &kp SPACE &kp GRAVE &kp LALT  &kp RALT &kp RGUI  &kp RCTRL 
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp ENTER &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
         };
+
+        qwerty_hr_layer { // Layer 1
+            display-name = "QWERTY-HRM"
+    
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER 
+            >;
+        };
+
+        colemak_layer { // Layer 2
+            display-name = "Colemak"
+    
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp F    &kp P    &kp G     &kp MINUS   &kp EQUAL   &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC  
+                &kp CAPS  &kp A    &kp R    &kp S    &kp T    &kp D     &kp LBKT    &kp RBKT    &kp H     &kp N     &kp E     &kp I    &kp O     &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp K     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+            >;
+        };
+
+        colemak_hr_layer { // Layer 3
+            display-name = "Colemak-HRM"
+    
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp F    &kp P    &kp G     &kp MINUS   &kp EQUAL   &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC  
+                &kp CAPS  &kp A    &kp R    &kp S    &kp T    &kp D     &kp LBKT    &kp RBKT    &kp H     &kp N     &kp E     &kp I    &kp O     &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp K     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+            >;
+        };
+
+        revmak_hr_layer { // Layer 4
+            display-name = "Colemak-reversed"
+    
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp K    &kp S    &kp F     &kp MINUS   &kp EQUAL   &kp O     &kp I     &kp L     &kp SEMI &kp R     &kp BSPC  
+                &kp CAPS  &kp A    &kp D    &kp G    &kp E    &kp T     &kp LBKT    &kp RBKT    &kp H     &kp Y     &kp N     &kp U    &kp P     &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp J     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+            >;
+        };
+
+        lower_layer { // Layer 5
+            display-name = "Lower"
+    
+            bindings = <
+                &kp ESC   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &trans      &trans      &kp KP_SLASH    &kp KP_N7 &kp KP_N8  &kp KP_N9    &kp KP_MINUS &kp BSPC  
+                &kp DEL   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &trans      &trans      &kp KP_ASTERISK &kp KP_N4 &kp KP_N5  &kp KP_N6    &kp KP_PLUS  &kp KP_ENTER
+                &trans    &kp F11  &kp F12  &none    &none    none      &kp SPACE   &kp SPACE   &kp COLON       &kp KP_N1 &kp KP_N2  &kp KP_N3    &kp KP_EQUAL &transp
+                &trans    &trans   &trans   &trans   &trans   &kp SPACE &none       &none       &kp BSPC        &kp KP_N0 &kp KP_DOT &kp KP_COMMA &none        &transp
+            >;
+        };
+
+        raise_layer { // Layer 6
+            display-name = "Raise"
+    
+            bindings = <
+                &kp ESC    &kp N1   &kp N1   &kp N1   &kp N1   &kp N1    &kp MINUS   &kp EQUAL   &kp N1    &kp N1    &kp N1    &kp N1   &kp N1    &kp DEL
+                &caps_word &trans   &trans   &trans   &trans   &trans    &kp LBKT    &kp RBKT    &kp PLUS  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp GRAVE
+                &kp LSHFT  &trans   &trans   &trans   &trans   &trans    &kp SPACE   &kp SPACE   &kp TILDE &kp UNDER &kp NUHS  &kp NUBS &kp PIPE  &kp BACKSLASH
+                &kp LCTRL  &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp BSPC  &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL 
+            >;
+        };
+
+        adjust_layer { // Layer 7
+            display-name = "Adjust"
+    
+            bindings = <
+                &kp LA(TAB) &to QTY      &to QTY_HR     &to CMK      &to CMK_HR   &to CMR       &kp MINUS   &kp EQUAL   &trans    &trans    &trans    &trans         &trans     &kp LC(LA(DEL))
+                &trans      &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp LBKT    &kp RBKT    &trans    &trans    &trans    &trans         &trans     &trans
+                &trans      &bt BT_CLR   &bt BT_CLR_ALL &out OUT_USB &out OUT_BLE &out OUT_TOG  &kp SPACE   &kp SPACE   &trans    &trans    &trans    &trans         &trans     &trans
+                &bootloader &sys_reset   &studio_unlock &trans       &trans       &trans        &none       &none       &trans    &trans    &trans    &studio_unlock &sys_reset &bootloader
+            >;
+        };
+
+        funmedia_layer { // Layer 8
+            display-name = "Fun/Media"
+    
+            bindings = <
+                &kp TAB   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &trans      &trans      &trans    &kp K_PP      &kp K_VOL_UP &kp PSCRN      &kp SLCK  &kp PAUSE_BREAK
+                &kp CAPS  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &trans      &trans      &trans    &kp K_PREV    &kp K_VOL_DN &kp K_NEXT     &trans    &trans
+                &trans    &kp F11  &kp F12  &kp C    &trans   &trans    &kp SPACE   &kp SPACE   &trans    &kp LC(LS(M)) &kp K_MUTE   &trans         &trans    &trans
+                &trans    &trans   &trans   &trans   &trans   &kp SPACE &none       &none       &kp SPACE &trans        &trans       &studio_unlock &trans    &trans
+            >;
+        };
+
+        maxtend_layer { // Layer 9
+            display-name = "Maxtend"
+    
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL 
+            >;
+        };
+
+        mouse_layer { // Layer 10
+            display-name = "Mouse"
+    
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL 
+            >;
+        };
+
+        numspace_layer { // Layer 11
+            display-name = "NumSpace"
+    
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL 
+            >;
+        };
+
+        numtab_layer { // Layer 12
+            display-name = "NumTab"
+    
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL 
+            >;
+        };
+
     };
  };
