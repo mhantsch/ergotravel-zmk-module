@@ -29,6 +29,14 @@
 //            then-layer = <ADJ>;
 //        };
 //    };
+    behaviors {
+        mup: mute_unmute_ptt {
+            compatible = "zmk,behavior-hold-tap";
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        }
+    }
 
     keymap {
         compatible = "zmk,keymap";
@@ -37,10 +45,10 @@
             display-name = "QWERTY";
     
             bindings = <
-                &kp TAB      &kp Q    &kp W    &kp E    &kp R       &kp T     &kp MINUS     &kp EQUAL   &kp Y         &kp U     &kp I     &kp O    &kp P     &kp BSPC  
-                &lt MAX BSPC &kp A    &kp S    &kp D    &kp F       &kp G     &kp LBKT      &kp RBKT    &kp H         &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
-                &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B     &kp LC(SPACE) &kp SPACE   &kp N         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
-                &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &kp SPACE &none         &none       &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+                &kp TAB      &kp Q    &kp W    &kp E    &kp R       &kp T     &kp MINUS                &kp EQUAL &kp Y         &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &lt MAX BSPC &kp A    &kp S    &kp D    &kp F       &kp G     &kp LBKT                 &kp RBKT  &kp H         &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B     &mup LC(LS(M)) LC(SPACE) &kp SPACE &kp N         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &kp SPACE &none                    &none     &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
         };
 
@@ -156,7 +164,7 @@
 
         mouse_layer { // Layer 11 - no support on ZMK at the moment
             display-name = "Mouse";
-    
+     
             bindings = <
                 &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
                 &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
