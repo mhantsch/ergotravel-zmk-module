@@ -20,7 +20,7 @@
 
 / {
 
-// This keymap has a distinct ADJUST button, so tri-layer functionality is not needed.
+// This keymap has a distinct ADJUST button, so tri-layer functionality is not needed, and actually it is detrimental (doesn't work well).
 //
 //    conditional_layers {
 //        compatible = "zmk,conditional-layers";
@@ -150,7 +150,7 @@
                 &kp TAB   &kp ESC   &none     &trans    &trans    &trans    &kp MINUS   &kp EQUAL   &kp PG_UP     &kp HOME  &kp UP     &kp END   &kp DEL   &kp INS
                 &trans    &kp LALT  &none     &kp LSHFT &kp LCTRL &kp LGUI  &kp LBKT    &kp RBKT    &kp PG_DN     &kp LEFT  &kp DOWN   &kp RIGHT &kp BSPC  &kp ENTER
                 &kp LSHFT &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &trans    &kp SPACE   &kp SPACE   &trans        &trans    &trans     &trans    &kp K_APP &kp RSHFT
-                &kp LCTRL &kp LGUI  &kp LALT  &mo ADJ   &mo LOW   &kp ENTER &none       &none       &kp LC(ENTER) &mo RSE   &mo FUN    &kp RALT  &kp RGUI  &kp RCTRL
+                &kp LCTRL &kp LGUI  &kp LALT  &mo ADJ   &mo LOW   &kp ENTER &none       &none       &kp LC(SPACE) &mo RSE   &mo FUN    &kp RALT  &kp RGUI  &kp RCTRL
             >;
         };
 
