@@ -29,6 +29,7 @@
 //            then-layer = <ADJ>;
 //        };
 //    };
+
     behaviors {
         mup: mute_unmute_ptt {
             compatible = "zmk,behavior-hold-tap";
