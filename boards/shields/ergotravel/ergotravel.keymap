@@ -37,21 +37,21 @@
             display-name = "QWERTY";
     
             bindings = <
-                &kp TAB      &kp Q    &kp W    &kp E    &kp R       &kp T     &kp MINUS   &kp EQUAL   &kp Y         &kp U     &kp I     &kp O    &kp P     &kp BSPC  
-                &lt MAX BSPC &kp A    &kp S    &kp D    &kp F       &kp G     &kp LBKT    &kp RBKT    &kp H         &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
-                &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B     &kp SPACE   &kp SPACE   &kp N         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
-                &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &kp SPACE &none       &none       &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+                &kp TAB      &kp Q    &kp W    &kp E    &kp R       &kp T     &kp MINUS     &kp EQUAL   &kp Y         &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &lt MAX BSPC &kp A    &kp S    &kp D    &kp F       &kp G     &kp LBKT      &kp RBKT    &kp H         &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B     &kp LC(SPACE) &kp SPACE   &kp N         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &kp SPACE &none         &none       &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
         };
 
         qwerty_hr_layer { // Layer 1
             display-name = "QWERTY-HRM";
-    
+
             bindings = <
-                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
-                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
-                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
-                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER 
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS     &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT      &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp LC(SPACE) &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none         &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER 
             >;
         };
 
@@ -59,10 +59,10 @@
             display-name = "Colemak";
     
             bindings = <
-                &kp TAB   &kp Q    &kp W    &kp F    &kp P    &kp G     &kp MINUS   &kp EQUAL   &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC  
-                &kp CAPS  &kp A    &kp R    &kp S    &kp T    &kp D     &kp LBKT    &kp RBKT    &kp H     &kp N     &kp E     &kp I    &kp O     &kp APOS  
-                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp K     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
-                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+                &kp TAB   &kp Q    &kp W    &kp F    &kp P    &kp G     &kp MINUS     &kp EQUAL   &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC  
+                &kp CAPS  &kp A    &kp R    &kp S    &kp T    &kp D     &kp LBKT      &kp RBKT    &kp H     &kp N     &kp E     &kp I    &kp O     &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp LC(SPACE) &kp SPACE   &kp K     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none         &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
         };
 
@@ -70,10 +70,10 @@
             display-name = "Colemak-HRM";
     
             bindings = <
-                &kp TAB   &kp Q    &kp W    &kp F    &kp P    &kp G     &kp MINUS   &kp EQUAL   &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC  
-                &kp CAPS  &kp A    &kp R    &kp S    &kp T    &kp D     &kp LBKT    &kp RBKT    &kp H     &kp N     &kp E     &kp I    &kp O     &kp APOS  
-                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp K     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
-                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+                &kp TAB   &kp Q    &kp W    &kp F    &kp P    &kp G     &kp MINUS     &kp EQUAL   &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC  
+                &kp CAPS  &kp A    &kp R    &kp S    &kp T    &kp D     &kp LBKT      &kp RBKT    &kp H     &kp N     &kp E     &kp I    &kp O     &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp LC(SPACE) &kp SPACE   &kp K     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none         &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
         };
 
@@ -81,10 +81,10 @@
             display-name = "Colemak-reversed";
     
             bindings = <
-                &kp TAB   &kp Q    &kp W    &kp K    &kp S    &kp F     &kp MINUS   &kp EQUAL   &kp O     &kp I     &kp L     &kp SEMI &kp R     &kp BSPC  
-                &kp CAPS  &kp A    &kp D    &kp G    &kp E    &kp T     &kp LBKT    &kp RBKT    &kp H     &kp Y     &kp N     &kp U    &kp P     &kp APOS  
-                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp J     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
-                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+                &kp TAB   &kp Q    &kp W    &kp K    &kp S    &kp F     &kp MINUS     &kp EQUAL   &kp O     &kp I     &kp L     &kp SEMI &kp R     &kp BSPC  
+                &kp CAPS  &kp A    &kp D    &kp G    &kp E    &kp T     &kp LBKT      &kp RBKT    &kp H     &kp Y     &kp N     &kp U    &kp P     &kp APOS  
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp LC(SPACE) &kp SPACE   &kp J     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none         &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
         };
 
@@ -136,9 +136,9 @@
             display-name = "Fun/Media";
     
             bindings = <
-                &kp TAB   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &trans      &trans      &trans    &kp K_PP      &kp K_VOL_UP &kp PSCRN      &kp SLCK  &kp PAUSE_BREAK
-                &kp CAPS  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &trans      &trans      &trans    &kp K_PREV    &kp K_VOL_DN &kp K_NEXT     &trans    &trans
-                &trans    &kp F11  &kp F12  &kp C    &trans   &trans    &kp SPACE   &kp SPACE   &trans    &kp LC(LS(M)) &kp K_MUTE   &trans         &trans    &trans
+                &kp TAB   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &trans      &trans      &trans    &kp C_PP      &kp C_VOL_UP &kp PSCRN      &kp SLCK  &kp PAUSE_BREAK
+                &kp CAPS  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &trans      &trans      &trans    &kp C_PREV    &kp C_VOL_DN &kp C_NEXT     &trans    &trans
+                &trans    &kp F11  &kp F12  &trans   &trans   &trans    &kp SPACE   &kp SPACE   &trans    &kp LC(LS(M)) &kp C_MUTE   &trans         &trans    &trans
                 &trans    &trans   &trans   &trans   &trans   &kp SPACE &none       &none       &kp SPACE &trans        &trans       &studio_unlock &trans    &trans
             >;
         };
