@@ -140,9 +140,9 @@
             display-name = "Lower";
     
             bindings = <
-                &kp ESC   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &trans      &trans      &kp KP_SLASH    &kp KP_N7 &kp KP_N8  &kp KP_N9    &kp KP_MINUS &kp BSPC  
+                &kp ESC   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &trans      &trans      &kp KP_SLASH    &kp KP_N7 &kp KP_N8  &kp KP_N9    &kp KP_MINUS &kp BSPC
                 &trans    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &trans      &trans      &kp KP_ASTERISK &kp KP_N4 &kp KP_N5  &kp KP_N6    &kp KP_PLUS  &kp KP_ENTER
-                &trans    &kp F11  &kp F12  &kp C_CALC &none  &SEMI     &kp KP_NLCK &kp SPACE   &kp COLON       &kp KP_N1 &kp KP_N2  &kp KP_N3    &kp KP_EQUAL &trans
+                &trans    &kp F11  &kp F12  &kp K_CALC &none  &kp SEMI  &kp KP_NLCK &kp SPACE   &kp COLON       &kp KP_N1 &kp KP_N2  &kp KP_N3    &kp KP_EQUAL &trans
                 &trans    &trans   &trans   &trans   &trans   &kp SPACE &none       &none       &kp SPACE       &kp KP_N0 &kp KP_DOT &kp KP_COMMA &none        &trans
             >;
         };
