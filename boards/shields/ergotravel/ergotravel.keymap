@@ -18,6 +18,10 @@
 #define NSP 12      // NumSpace
 #define NTB 13      // NumTab
 
+&lt {
+    quick-tap-ms = <200>;
+};
+
 / {
 
 // This keymap has a distinct ADJUST button, so tri-layer functionality is not needed, and actually it is detrimental (doesn't work well).
@@ -61,10 +65,6 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <1 2 3 4 5 6 15 16 17 18 19 20 29 30 31 32 33>;
         };
-    };
-
-    &lt {
-        quick-tap-ms = <200>;
     };
 
     keymap {
