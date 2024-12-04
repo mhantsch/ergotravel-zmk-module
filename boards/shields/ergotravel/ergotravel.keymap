@@ -35,9 +35,36 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
+            hold-while-undecided-linger;
             bindings = <&kp>, <&kp>;
         };
+
+        hl: homerow_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            // quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 21 22 23 24 25 26 27 36 37 38 39 40>;
+        };
+
+        hr: homerow_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            // quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1 2 3 4 5 6 15 16 17 18 19 20 29 30 31 32 33>;
+        };
+    };
+
+    &lt {
+        quick-tap-ms = <200>;
     };
 
     keymap {
@@ -58,10 +85,10 @@
             display-name = "QWERTY-HRM";
 
             bindings = <
-                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS     &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
-                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT      &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
-                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp LC(SPACE) &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
-                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none         &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER 
+                &kp TAB      &kp Q      &kp W      &kp E       &kp R       &kp T      &kp MINUS                &kp EQUAL &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSPC 
+                &lt MAX BSPC &hl LALT A &hl RALT S &hl LSHFT D &hl LCTRL F &hl LGUI G &kp LBKT                 &kp RBKT  &hr RGUI H    &hr RCTRL J &hr RSHFT K &hr RALT L &hr LALT SEMI &kp APOS
+                &kp LSHFT    &kp Z      &kp X      &kp C       &kp V       &kp B      &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp N         &kp M       &kp COMMA   &kp DOT    &kp SLASH     &mt RSHFT ENTER
+                &kp LCTRL    &kp LGUI   &kp LALT   &mo ADJ     &lt LOW TAB &kp SPACE  &none                    &none     &lt NSP SPACE &mo RSE     &mo FUN     &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
         };
 
@@ -116,7 +143,7 @@
                 &kp ESC   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &trans      &trans      &kp KP_SLASH    &kp KP_N7 &kp KP_N8  &kp KP_N9    &kp KP_MINUS &kp BSPC  
                 &kp DEL   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &trans      &trans      &kp KP_ASTERISK &kp KP_N4 &kp KP_N5  &kp KP_N6    &kp KP_PLUS  &kp KP_ENTER
                 &trans    &kp F11  &kp F12  &kp K_CALC &none  &none     &kp KP_NLCK &kp SPACE   &kp COLON       &kp KP_N1 &kp KP_N2  &kp KP_N3    &kp KP_EQUAL &trans
-                &trans    &trans   &trans   &trans   &trans   &kp SPACE &none       &none       &kp BSPC        &kp KP_N0 &kp KP_DOT &kp KP_COMMA &none        &trans
+                &trans    &trans   &trans   &trans   &trans   &kp SPACE &none       &none       &kp SPACE       &kp KP_N0 &kp KP_DOT &kp KP_COMMA &none        &trans
             >;
         };
 
