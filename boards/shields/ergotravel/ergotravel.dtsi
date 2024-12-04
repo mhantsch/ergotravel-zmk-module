@@ -29,7 +29,7 @@
 };
 
 / {
-    default_transform: matrix_transform0 {
+    matrix_transform0: matrix_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <14>;
         rows = <4>;
@@ -50,6 +50,6 @@
     chosen {
         //zmk,physical-layout = &layout;
         zmk,kscan = &kscan0;
-        //zmk,matrix-transform = &default_transform;
+        //zmk,matrix-transform = &matrix_transform0;
     };
 };
