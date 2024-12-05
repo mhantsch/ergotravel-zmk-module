@@ -50,6 +50,6 @@
     chosen {
         //zmk,physical-layout = &layout;
         zmk,kscan = &kscan0;
-        //zmk,matrix-transform = &matrix_transform0;
+        zmk,matrix-transform = &matrix_transform0;
     };
 };
