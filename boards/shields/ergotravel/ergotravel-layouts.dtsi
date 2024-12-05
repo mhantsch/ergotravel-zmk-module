@@ -55,8 +55,8 @@
             , <&key_physical_attrs 100 100  300  300       0     0     0>
             , <&key_physical_attrs 125 100  425  325    1500   487   375>
             , <&key_physical_attrs 100 100  600  400    3000   700   350>
-            , <&key_physical_attrs 100 100  680  500       0     0     0>   // XtraLeft
-            , <&key_physical_attrs 100 100  820  500       0     0     0>   // XtraRight
+            , <&key_physical_attrs 100 100  700  360       0     0     0>   // XtraLeft
+            , <&key_physical_attrs 100 100  800  360       0     0     0>   // XtraRight
             , <&key_physical_attrs 100 100  900  400  (-3000)  900   350>
             , <&key_physical_attrs 125 100 1050  325  (-1500) 1112   375>
             , <&key_physical_attrs 100 100 1200  300       0     0     0>
