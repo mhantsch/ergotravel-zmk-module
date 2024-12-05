@@ -47,8 +47,8 @@
 
 / {
     chosen {
-        //zmk,physical-layout = &layout;
+        zmk,physical-layout = &physical_layout0;
         zmk,kscan = &kscan0;
-        zmk,matrix-transform = &matrix_transform0;
+        //zmk,matrix-transform = &matrix_transform0;
     };
 };
