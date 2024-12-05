@@ -1,3 +1,6 @@
+// Physical layout of keys.
+// Really helpful when editing this: https://zmk-layout-helper.netlify.app/
+
 #include <physical_layouts.dtsi>
 
 / {
