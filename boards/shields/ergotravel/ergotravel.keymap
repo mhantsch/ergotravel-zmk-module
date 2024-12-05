@@ -22,6 +22,10 @@
     quick-tap-ms = <200>;
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE BACKSPACE DELETE SEMI>;  // SEMI is added here because QWERTY semicolon is letter 'O' in Colemak.
+};
+
 / {
 
 // This keymap has a distinct ADJUST button, so tri-layer functionality is not needed, and actually it is detrimental (doesn't work well).
