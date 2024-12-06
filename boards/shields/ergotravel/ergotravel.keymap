@@ -91,6 +91,17 @@
             >;
         };
 
+        colemak_layer { // Layer 2
+            display-name = "Colemak";
+    
+            bindings = <
+                &kp TAB      &kp Q    &kp W    &kp F    &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC
+                &lt MAX BSPC &kp A    &kp R    &kp S    &kp T       &kp D         &kp LBKT                 &kp RBKT  &kp H         &kp N     &kp E     &kp I    &kp O     &kp APOS
+                &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE)&kp K         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+            >;
+        };
+
         qwerty_hr_layer { // Layer 1
             display-name = "QWERTY-HRM";
 
@@ -99,20 +110,6 @@
                 &lt MAX BSPC &hl LALT A &hl RALT S &hl LSHFT D &hl LCTRL F &hl LGUI G    &kp LBKT                 &kp RBKT  &hr RGUI H    &hr RCTRL J &hr RSHFT K &hr RALT L &hr LALT SEMI &kp APOS
                 &kp LSHFT    &kp Z      &kp X      &kp C       &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp N         &kp M       &kp COMMA   &kp DOT    &kp SLASH     &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI   &kp LALT   &mo ADJ     &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE     &mo FUN     &kp RALT   &kp RGUI      &mt RCTRL ENTER
-            >;
-        };
-
-        colemak_layer { // Layer 2
-            display-name = "Colemak";
-    
-            bindings = <
-                &kp TAB      &kp Q    &kp W    &kp F    &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC
-
-                &lt MAX BSPC &kp A    &kp R    &kp S    &kp T       &kp D         &kp LBKT                 &kp RBKT  &kp H         &kp N     &kp E     &kp I    &kp O     &kp APOS
-
-                &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE)&kp K         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
-
-                &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
         };
 
