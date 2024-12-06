@@ -82,10 +82,10 @@
 
         qwerty_layer { // Layer 0 (default_layer)
             display-name = "QWERTY";
-    
+
             bindings = <
-                &kp TAB      &kp Q    &kp W    &kp E    &kp R       &kp T         &kp MINUS                &kp EQUAL &kp Y         &kp U     &kp I     &kp O    &kp P     &kp BSPC  
-                &lt MAX BSPC &kp A    &kp S    &kp D    &kp F       &kp G         &kp LBKT                 &kp RBKT  &kp H         &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp TAB      &kp Q    &kp W    &kp E    &kp R       &kp T         &kp MINUS                &kp EQUAL &kp Y         &kp U     &kp I     &kp O    &kp P     &kp BSPC
+                &lt MAX BSPC &kp A    &kp S    &kp D    &kp F       &kp G         &kp LBKT                 &kp RBKT  &kp H         &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
                 &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp N         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
@@ -95,7 +95,7 @@
             display-name = "QWERTY-HRM";
 
             bindings = <
-                &kp TAB      &kp Q      &kp W      &kp E       &kp R       &kp T         &kp MINUS                &kp EQUAL &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSPC 
+                &kp TAB      &kp Q      &kp W      &kp E       &kp R       &kp T         &kp MINUS                &kp EQUAL &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSPC
                 &lt MAX BSPC &hl LALT A &hl RALT S &hl LSHFT D &hl LCTRL F &hl LGUI G    &kp LBKT                 &kp RBKT  &hr RGUI H    &hr RCTRL J &hr RSHFT K &hr RALT L &hr LALT SEMI &kp APOS
                 &kp LSHFT    &kp Z      &kp X      &kp C       &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp N         &kp M       &kp COMMA   &kp DOT    &kp SLASH     &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI   &kp LALT   &mo ADJ     &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE     &mo FUN     &kp RALT   &kp RGUI      &mt RCTRL ENTER
@@ -106,8 +106,8 @@
             display-name = "Colemak";
     
             bindings = <
-                &kp TAB      &kp Q    &kp W    &kp F    &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC  
-                &lt MAX BSPC &kp A    &kp R    &kp S    &kp T       &kp D         &kp LBKT                 &kp RBKT  &kp H         &kp N     &kp E     &kp I    &kp O     &kp APOS  
+                &kp TAB      &kp Q    &kp W    &kp F    &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC
+                &lt MAX BSPC &kp A    &kp R    &kp S    &kp T       &kp D         &kp LBKT                 &kp RBKT  &kp H         &kp N     &kp E     &kp I    &kp O     &kp APOS
                 &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE)&kp K         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
