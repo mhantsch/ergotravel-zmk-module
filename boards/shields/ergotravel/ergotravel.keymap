@@ -81,6 +81,16 @@
 //  (28) LSHFT    (29) Z    (30) X    (31) C    (32) V       (33) B         (34) LC(SPACE)... (35) SPACE (36) N         (37) M     (38) COMMA (39) DOT  (40) SLASH (41) RSHFT ENTER
 //  (42) LCTRL    (43) LGUI (44) LALT (45) ADJ  (46) LOW TAB (47) MSE SPACE (48) none         (49) none  (50) NSP SPACE (51) RSE   (52) FUN   (53) RALT (54) RGUI  (55) RCTRL ENTER
 
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            require-prior-idle-ms = <100>;
+            timeout-ms = <100>;
+            key-positions = <1 2>;
+            bindings = <&kp ESC>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
