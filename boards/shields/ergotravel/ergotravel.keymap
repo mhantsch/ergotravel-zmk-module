@@ -89,6 +89,12 @@
             key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
+      combo_esc2 {
+            require-prior-idle-ms = <100>;
+            timeout-ms = <100>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
     };
 
     keymap {
@@ -210,7 +216,7 @@
             bindings = <
                 &kp TAB   &kp ESC   &none     &kp LA(LEFT) &kp LA(RIGHT) &trans    &kp MINUS   &kp EQUAL   &kp PG_UP     &kp HOME  &kp UP     &kp END   &kp DEL   &kp INS
                 &trans    &kp LALT  &none     &kp LSHFT    &kp LCTRL     &kp LGUI  &kp LBKT    &kp RBKT    &kp PG_DN     &kp LEFT  &kp DOWN   &kp RIGHT &kp BSPC  &kp ENTER
-                &kp LSHFT &kp LC(Z) &kp LC(X) &kp LC(C)    &kp LC(V)     &trans    &kp SPACE   &kp SPACE   &trans        &trans    &trans     &trans    &kp K_APP &kp RSHFT
+                &kp LSHFT &kp LC(Z) &kp LC(X) &kp LC(C)    &kp LC(V)     &kp LC(B) &kp SPACE   &kp SPACE   &trans        &trans    &trans     &trans    &kp K_APP &kp RSHFT
                 &kp LCTRL &kp LGUI  &kp LALT  &mo ADJ      &mo LOW       &kp ENTER &none       &none       &kp LC(SPACE) &mo RSE   &mo FUN    &kp RALT  &kp RGUI  &kp RCTRL
             >;
         };
