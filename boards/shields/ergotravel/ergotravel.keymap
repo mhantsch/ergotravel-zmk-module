@@ -23,7 +23,8 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE BACKSPACE DELETE SEMI>;  // SEMI is added here because QWERTY semicolon is letter 'O' in Colemak.
+    continue-list = <UNDERSCORE BACKSPACE DELETE SEMI>;  
+    // SEMI is added here because QWERTY semicolon is letter 'O' in Colemak. Unfortunately, it doesn't automatically get shifted.
 };
 
 / {
@@ -56,7 +57,9 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 36 37 38 39 40 41 50 51 52 53 54 55>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 36 37 38 39 40 41 46 50 51 52 53 54 55>;
+            // these are all the right-side buttons
+            // left-side thumb button for LOW/TAB also included, allowing Alt-TAB with left hand without tapping-term-ms delay.
         };
 
         hr: homerow_mod_right {
@@ -68,6 +71,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 6 15 16 17 18 19 20 28 29 30 31 32 33 42 43 44 45 46 47>;
+            // these are all the left-side buttons
         };
     };
 
@@ -150,10 +154,10 @@
             display-name = "Lower";
     
             bindings = <
-                &kp ESC   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &trans      &trans      &kp KP_SLASH    &kp KP_N7 &kp KP_N8  &kp KP_N9    &kp KP_MINUS &kp BSPC
-                &trans    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &trans      &trans      &kp KP_ASTERISK &kp KP_N4 &kp KP_N5  &kp KP_N6    &kp KP_PLUS  &kp KP_ENTER
-                &trans    &kp F11  &kp F12  &kp K_CALC &none  &kp SEMI  &kp KP_NLCK &kp SPACE   &kp COLON       &kp KP_N1 &kp KP_N2  &kp KP_N3    &kp KP_EQUAL &trans
-                &trans    &trans   &trans   &trans   &trans   &kp SPACE &none       &none       &kp SPACE       &kp KP_N0 &kp KP_DOT &kp KP_COMMA &none        &trans
+                &kp ESC   &kp F1   &kp F2   &kp F3        &kp F4   &kp F5    &trans      &trans      &kp KP_SLASH    &kp KP_N7 &kp KP_N8  &kp KP_N9    &kp KP_MINUS &kp BSPC
+                &trans    &kp F6   &kp F7   &kp F8        &kp F9   &kp F10   &trans      &trans      &kp KP_ASTERISK &kp KP_N4 &kp KP_N5  &kp KP_N6    &kp KP_PLUS  &kp KP_ENTER
+                &trans    &kp F11  &kp F12  &kp C_AL_CALC &none    &kp SEMI  &kp KP_NLCK &kp SPACE   &kp COLON       &kp KP_N1 &kp KP_N2  &kp KP_N3    &kp EQUAL    &trans
+                &trans    &trans   &trans   &trans        &trans   &kp SPACE &none       &none       &kp SPACE       &kp KP_N0 &kp KP_DOT &kp COMMA    &none        &trans
             >;
         };
 
@@ -161,10 +165,10 @@
             display-name = "Raise";
     
             bindings = <
-                &kp ESC    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5    &kp MINUS   &kp EQUAL   &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp DEL
-                &caps_word &trans   &trans   &trans   &trans   &trans    &kp LBKT    &kp RBKT    &kp PLUS  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp GRAVE
-                &kp LSHFT  &trans   &trans   &trans   &trans   &trans    &kp SPACE   &kp SPACE   &kp TILDE &kp UNDER &kp NUHS  &kp NUBS &kp PIPE  &kp BACKSLASH
-                &kp LCTRL  &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp BSPC  &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL 
+                &kp ESC    &kp N1   &kp N2    &kp N3    &kp N4    &kp N5    &kp MINUS   &kp EQUAL   &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp DEL
+                &caps_word &trans   &kp LT    &kp LPAR  &kp RPAR  &kp GT    &kp LBKT    &kp RBKT    &kp PLUS  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp GRAVE
+                &kp LSHFT  &trans   &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &kp SPACE   &kp SPACE   &kp TILDE &kp UNDER &kp NUHS  &kp NUBS &kp PIPE  &kp BACKSLASH
+                &kp LCTRL  &kp LGUI &kp LALT  &mo ADJ   &mo LOW   &kp BSPC  &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL 
             >;
         };
 
@@ -205,10 +209,10 @@
             display-name = "Mouse";
      
             bindings = <
-                &kp TAB   &kp ESC  &kp LC(W)     &kp LC(PG_UP) &kp LC(PG_DN) &kp LC(F) &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC
-                &kp CAPS  &kp A    &kp S         &kp D         &kp F         &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
-                &kp LSHFT &kp Z    &kp LC(LS(X)) &kp LC(LS(C)) &kp LC(LS(V)) &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
-                &kp LCTRL &kp LGUI &kp LALT      &mo ADJ       &mo LOW       &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
+                &kp TAB   &kp ESC       &kp LC(W)     &kp LC(PG_UP) &kp LC(PG_DN) &kp LC(F) &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC
+                &kp CAPS  &kp A         &kp S         &kp D         &kp F         &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
+                &kp LSHFT &kp C_AL_LOCK &kp LC(LS(X)) &kp LC(LS(C)) &kp LC(LS(V)) &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
+                &kp LCTRL &kp LGUI      &kp LALT      &mo ADJ       &mo LOW       &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
             >;
         };
 
@@ -235,4 +239,4 @@
         };
 
     };
- };
+};
