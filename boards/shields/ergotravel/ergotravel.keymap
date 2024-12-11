@@ -89,14 +89,14 @@
             require-prior-idle-ms = <100>;
             timeout-ms = <100>;
             key-positions = <1 2>;
-            layers = <QTY QTY_HR CMK CMK_HR CMR TRN>
+            layers = <QTY QTY_HR CMK CMK_HR CMR TRN>;
             bindings = <&kp ESC>;
         };
       combo_esc2 {
             require-prior-idle-ms = <100>;
             timeout-ms = <100>;
             key-positions = <0 1>;
-            layers = <QTY QTY_HR CMK CMK_HR CMR TRN>
+            layers = <QTY QTY_HR CMK CMK_HR CMR TRN>;
             bindings = <&kp ESC>;
         };
     };
