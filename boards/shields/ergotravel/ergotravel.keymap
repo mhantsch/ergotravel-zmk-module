@@ -108,14 +108,14 @@
             require-prior-idle-ms = <100>;
             timeout-ms = <100>;
             key-positions = <26 27>;
-            layers = <QTY QTY_HR CMK CMK_HR CMR TRN>;
+            layers = <QTY QTY_HR CMK CMK_HR CMR TRN LOW RSE>;
             bindings = <&kp ENTER>;
         };
         combo_enter2 {
             require-prior-idle-ms = <100>;
             timeout-ms = <100>;
             key-positions = <23 24 25>;
-            layers = <QTY QTY_HR CMK CMK_HR CMR TRN>;
+            layers = <QTY QTY_HR CMK CMK_HR CMR TRN LOW RSE>;
             bindings = <&kp ENTER>;
         };
     };
