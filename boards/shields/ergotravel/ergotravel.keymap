@@ -153,7 +153,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macros_press &kp LALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N8>
                 , <&macro_release &kp LALT>;
         };
@@ -161,7 +161,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macros_press &kp LALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N4 KP_N6>
                 , <&macro_release &kp LALT>;
         };
@@ -169,7 +169,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macros_press &kp LALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N5 KP_N2>
                 , <&macro_release &kp LALT>;
         };
@@ -177,7 +177,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macros_press &kp LALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N3>
                 , <&macro_release &kp LALT>;
         };
@@ -185,7 +185,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macros_press &kp LALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N1 KP_N9 KP_N6>
                 , <&macro_release &kp LALT>;
         };
@@ -193,7 +193,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macros_press &kp LALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N1 KP_N4>
                 , <&macro_release &kp LALT>;
         };
@@ -201,7 +201,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macros_press &kp LALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N0>
                 , <&macro_release &kp LALT>;
         };
