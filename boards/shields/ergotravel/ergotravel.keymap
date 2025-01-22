@@ -22,6 +22,7 @@
 #define MSE 11      // Mouse
 #define NSP 12      // NumSpace
 #define NTB 13      // NumTab
+#define AGR 14      // AltGr (for Windows)
 
 &lt {
     quick-tap-ms = <200>;
@@ -34,7 +35,7 @@
 
 / {
 
-// This keymap has a distinct ADJUST button, so tri-layer functionality is not needed, and actually it is detrimental (doesn't work well).
+// This keymap has a distinct ADJUST button, so tri-layer functionality is not needed, and actually doesn't seem to work anyway.
 //
 //    conditional_layers {
 //        compatible = "zmk,conditional-layers";
@@ -80,6 +81,33 @@
             // these are all the left-side buttons
             hold-trigger-on-release;
         };
+
+        hagl: homerow_altgr_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 36 37 38 39 40 41 46 50 51 52 53 54 55>;
+            // these are all the right-side buttons
+            // left-side thumb button for LOW/TAB also included, allowing Alt-TAB with left hand without tapping-term-ms delay.
+            hold-trigger-on-release;
+        };
+
+        hagr: homerow_altgr_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 15 16 17 18 19 20 28 29 30 31 32 33 42 43 44 45 46 47>;
+            // these are all the left-side buttons
+            hold-trigger-on-release;
+        };
     };
 
 //  key positions (for hold-trigger-key-positions):
@@ -120,6 +148,65 @@
         };
     };
 
+    macros {
+        uml_a: uml_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macros_press &kp LALT>
+                , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N8>
+                , <&macro_release &kp LALT>
+        }
+        uml_o: uml_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macros_press &kp LALT>
+                , <&macro_tap &kp KP_N0 KP_N2 KP_N4 KP_N6>
+                , <&macro_release &kp LALT>
+        }
+        uml_u: uml_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macros_press &kp LALT>
+                , <&macro_tap &kp KP_N0 KP_N2 KP_N5 KP_N2>
+                , <&macro_release &kp LALT>
+        }
+        uml_sz: uml_sz {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macros_press &kp LALT>
+                , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N3>
+                , <&macro_release &kp LALT>
+        }
+        uml_A: uml_A {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macros_press &kp LALT>
+                , <&macro_tap &kp KP_N0 KP_N1 KP_N9 KP_N6>
+                , <&macro_release &kp LALT>
+        }
+        uml_O: uml_O {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macros_press &kp LALT>
+                , <&macro_tap &kp KP_N0 KP_N2 KP_N1 KP_N4>
+                , <&macro_release &kp LALT>
+        }
+        uml_U: uml_U {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macros_press &kp LALT>
+                , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N0>
+                , <&macro_release &kp LALT>
+        }
+    }
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -156,14 +243,25 @@
             >;
         };
 
+//        colemak_hr_layer { // Layer 3
+//            display-name = "Colemak-HRM";
+//
+//            bindings = <
+//                &kp TAB      &kp Q      &kp W      &kp F       &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L       &kp U       &kp Y      &kp SEMI   &kp BSPC
+//                &lt MAX BSPC &hl LALT A &hl RALT R &hl LSHFT S &hl LCTRL T &hl LGUI D    &kp LBKT                 &kp RBKT  &hr RGUI H    &hr RCTRL N &hr RSHFT E &hr RALT I &hr LALT O &kp APOS
+//                &kp LSHFT    &kp Z      &kp X      &kp C       &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M       &kp COMMA   &kp DOT    &kp SLASH  &mt RSHFT ENTER
+//                &kp LCTRL    &kp LGUI   &kp LALT   &mo ADJ     &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE     &mo FUN     &kp RALT   &kp RGUI   &mt RCTRL ENTER
+//            >;
+//        };
+//
         colemak_hr_layer { // Layer 3
             display-name = "Colemak-HRM";
 
             bindings = <
-                &kp TAB      &kp Q      &kp W      &kp F       &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L       &kp U       &kp Y      &kp SEMI   &kp BSPC
-                &lt MAX BSPC &hl LALT A &hl RALT R &hl LSHFT S &hl LCTRL T &hl LGUI D    &kp LBKT                 &kp RBKT  &hr RGUI H    &hr RCTRL N &hr RSHFT E &hr RALT I &hr LALT O &kp APOS
-                &kp LSHFT    &kp Z      &kp X      &kp C       &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M       &kp COMMA   &kp DOT    &kp SLASH  &mt RSHFT ENTER
-                &kp LCTRL    &kp LGUI   &kp LALT   &mo ADJ     &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE     &mo FUN     &kp RALT   &kp RGUI   &mt RCTRL ENTER
+                &kp TAB      &kp Q      &kp W       &kp F       &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L       &kp U       &kp Y       &kp SEMI   &kp BSPC
+                &lt MAX BSPC &hl LALT A &hagl AGR R &hl LSHFT S &hl LCTRL T &hl LGUI D    &kp LBKT                 &kp RBKT  &hr RGUI H    &hr RCTRL N &hr RSHFT E &hagr AGR I &hr LALT O &kp APOS
+                &kp LSHFT    &kp Z      &kp X       &kp C       &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M       &kp COMMA   &kp DOT     &kp SLASH  &mt RSHFT ENTER
+                &kp LCTRL    &kp LGUI   &kp LALT    &mo ADJ     &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE     &mo FUN     &kp RALT    &kp RGUI   &mt RCTRL ENTER
             >;
         };
 
@@ -270,10 +368,21 @@
             display-name = "NumTab";
     
             bindings = <
-                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC  
-                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
                 &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
-                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL 
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
+            >;
+        };
+
+        altgr_layer { // Layer 14
+            display-name = "AltGr";
+    
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &uml_u   &uml_o    &kp BSPC
+                &kp CAPS  &uml_a   &kp S    &uml_sz  &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
             >;
         };
 
