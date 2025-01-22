@@ -156,7 +156,7 @@
                 = <&macros_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N8>
                 , <&macro_release &kp LALT>
-        }
+        };
         uml_o: uml_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -164,7 +164,7 @@
                 = <&macros_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N4 KP_N6>
                 , <&macro_release &kp LALT>
-        }
+        };
         uml_u: uml_u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -172,7 +172,7 @@
                 = <&macros_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N5 KP_N2>
                 , <&macro_release &kp LALT>
-        }
+        };
         uml_sz: uml_sz {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -180,7 +180,7 @@
                 = <&macros_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N3>
                 , <&macro_release &kp LALT>
-        }
+        };
         uml_A: uml_A {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -188,7 +188,7 @@
                 = <&macros_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N1 KP_N9 KP_N6>
                 , <&macro_release &kp LALT>
-        }
+        };
         uml_O: uml_O {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -196,7 +196,7 @@
                 = <&macros_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N1 KP_N4>
                 , <&macro_release &kp LALT>
-        }
+        };
         uml_U: uml_U {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -204,8 +204,8 @@
                 = <&macros_press &kp LALT>
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N0>
                 , <&macro_release &kp LALT>
-        }
-    }
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
