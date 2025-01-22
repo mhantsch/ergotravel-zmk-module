@@ -181,7 +181,7 @@
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N3>
                 , <&macro_release &kp LALT>;
         };
-        uml_A: uml_A {
+        umu_a: umu_a {  // uppercase
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -189,7 +189,7 @@
                 , <&macro_tap &kp KP_N0 KP_N1 KP_N9 KP_N6>
                 , <&macro_release &kp LALT>;
         };
-        uml_O: uml_O {
+        umu_o: umu_o {  // uppercase
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -197,7 +197,7 @@
                 , <&macro_tap &kp KP_N0 KP_N2 KP_N1 KP_N4>
                 , <&macro_release &kp LALT>;
         };
-        uml_U: uml_U {
+        umu_u: umu_u {  // uppercase
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
