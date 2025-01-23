@@ -388,6 +388,12 @@
             >;
         };
 
+        // The following two layers generate Colemak AltGr and Colemak AltGr-Shift international characters using Windows Alt+Numpad keystrokes.
+        // Each key needs to be bound to a macro that sends the Alt+Numpad scancodes. You'll need lots of macros for this.
+        // At the moment, only German Umlauts äöüß and shifted German Umlauts ÄÖÜ have been created.
+        // ß (rewritten as "sz" in ASCII) has a very special binding because it functions as a layer shift when held, but needs to call
+        // the uml_sz macro when tapped.
+
         altgr_layer { // Layer 14
             display-name = "AltGr";
     
@@ -399,7 +405,7 @@
             >;
         };
 
-        altgrshift_layer { // Layer 1%
+        altgrshift_layer { // Layer 15
             display-name = "AltGrShift";
     
             bindings = <
