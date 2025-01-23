@@ -55,7 +55,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hl: homerow_mod_left {
+        hml: homerow_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -69,7 +69,7 @@
             hold-trigger-on-release;
         };
 
-        hr: homerow_mod_right {
+        hmr: homerow_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -82,7 +82,7 @@
             hold-trigger-on-release;
         };
 
-        hagl: homerow_altgr_left {
+        hll: homerow_layer_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -96,7 +96,7 @@
             hold-trigger-on-release;
         };
 
-        hagr: homerow_altgr_right {
+        hlr: homerow_layer_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -225,10 +225,10 @@
             display-name = "QWERTY-HRM";
 
             bindings = <
-                &kp TAB      &kp Q      &kp W      &kp E       &kp R       &kp T         &kp MINUS                &kp EQUAL &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSPC
-                &lt MAX BSPC &hl LALT A &hl RALT S &hl LSHFT D &hl LCTRL F &hl LGUI G    &kp LBKT                 &kp RBKT  &hr RGUI H    &hr RCTRL J &hr RSHFT K &hr RALT L &hr LALT SEMI &kp APOS
-                &kp LSHFT    &kp Z      &kp X      &kp C       &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp N         &kp M       &kp COMMA   &kp DOT    &kp SLASH     &mt RSHFT ENTER
-                &kp LCTRL    &kp LGUI   &kp LALT   &mo ADJ     &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE     &mo FUN     &kp RALT   &kp RGUI      &mt RCTRL ENTER
+                &kp TAB      &kp Q       &kp W       &kp E        &kp R        &kp T         &kp MINUS                &kp EQUAL &kp Y         &kp U        &kp I        &kp O       &kp P          &kp BSPC
+                &lt MAX BSPC &hml LALT A &hml RALT S &hml LSHFT D &hml LCTRL F &hml LGUI G   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL J &hmr RSHFT K &hmr RALT L &hmr LALT SEMI &kp APOS
+                &kp LSHFT    &kp Z       &kp X       &kp C        &kp V        &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp N         &kp M        &kp COMMA    &kp DOT     &kp SLASH      &mt RSHFT ENTER
+                &kp LCTRL    &kp LGUI    &kp LALT    &mo ADJ      &lt LOW TAB  &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE      &mo FUN      &kp RALT    &kp RGUI       &mt RCTRL ENTER
             >;
         };
 
@@ -258,10 +258,10 @@
             display-name = "Colemak-HRM";
 
             bindings = <
-                &kp TAB      &kp Q      &kp W       &kp F       &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L       &kp U       &kp Y       &kp SEMI   &kp BSPC
-                &lt MAX BSPC &hl LALT A &hagl AGR R &hl LSHFT S &hl LCTRL T &hl LGUI D    &kp LBKT                 &kp RBKT  &hr RGUI H    &hr RCTRL N &hr RSHFT E &hagr AGR I &hr LALT O &kp APOS
-                &kp LSHFT    &kp Z      &kp X       &kp C       &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M       &kp COMMA   &kp DOT     &kp SLASH  &mt RSHFT ENTER
-                &kp LCTRL    &kp LGUI   &kp LALT    &mo ADJ     &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE     &mo FUN     &kp RALT    &kp RGUI   &mt RCTRL ENTER
+                &kp TAB      &kp Q       &kp W      &kp F        &kp P        &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L        &kp U        &kp Y       &kp SEMI    &kp BSPC
+                &lt MAX BSPC &hml LALT A &hll AGR R &hml LSHFT S &hml LCTRL T &hml LGUI D   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL N &hmr RSHFT E &hlr AGR I  &hmr LALT O &kp APOS
+                &kp LSHFT    &kp Z       &kp X      &kp C        &kp V        &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M        &kp COMMA    &kp DOT     &kp SLASH   &mt RSHFT ENTER
+                &kp LCTRL    &kp LGUI    &kp LALT   &mo ADJ      &lt LOW TAB  &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE      &mo FUN      &kp RALT    &kp RGUI    &mt RCTRL ENTER
             >;
         };
 
@@ -379,8 +379,19 @@
             display-name = "AltGr";
     
             bindings = <
-                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &uml_u   &uml_o    &kp BSPC
-                &kp CAPS  &uml_a   &kp S    &uml_sz  &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
+                &kp TAB   &uml_a   &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &uml_u   &uml_o    &kp BSPC
+                &kp CAPS  &kp A    &kp S    &uml_sz  &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
+                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
+                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
+            >;
+        };
+
+        altgr_layer { // Layer 1%
+            display-name = "AltGrShift";
+    
+            bindings = <
+                &kp TAB   &umu_a   &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &umu_u   &umu_o    &kp BSPC
+                &kp CAPS  &kp A    &kp S    &uml_sz  &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
                 &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
                 &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
             >;
