@@ -149,15 +149,15 @@
     };
 
     macros {
-        uml_a: uml_a {
+        uml_a: umlaut_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N8>
+                , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>
                 , <&macro_release &kp LALT>;
         };
-//        uml_o: uml_o {
+//        uml_o: umlaut_o {
 //            compatible = "zmk,behavior-macro";
 //            #binding-cells = <0>;
 //            bindings
@@ -165,7 +165,7 @@
 //                , <&macro_tap &kp KP_N0 KP_N2 KP_N4 KP_N6>
 //                , <&macro_release &kp LALT>;
 //        };
-//        uml_u: uml_u {
+//        uml_u: umlaut_u {
 //            compatible = "zmk,behavior-macro";
 //            #binding-cells = <0>;
 //            bindings
@@ -173,7 +173,7 @@
 //                , <&macro_tap &kp KP_N0 KP_N2 KP_N5 KP_N2>
 //                , <&macro_release &kp LALT>;
 //        };
-//        uml_sz: uml_sz {
+//        uml_sz: umlaut_sz {
 //            compatible = "zmk,behavior-macro";
 //            #binding-cells = <0>;
 //            bindings
@@ -181,7 +181,7 @@
 //                , <&macro_tap &kp KP_N0 KP_N2 KP_N2 KP_N3>
 //                , <&macro_release &kp LALT>;
 //        };
-//        umu_a: umu_a {  // uppercase
+//        umu_a: umlaut_a_uppercase {  // uppercase
 //            compatible = "zmk,behavior-macro";
 //            #binding-cells = <0>;
 //            bindings
@@ -189,7 +189,7 @@
 //                , <&macro_tap &kp KP_N0 KP_N1 KP_N9 KP_N6>
 //                , <&macro_release &kp LALT>;
 //        };
-//        umu_o: umu_o {  // uppercase
+//        umu_o: umlaut_o_uppercase {  // uppercase
 //            compatible = "zmk,behavior-macro";
 //            #binding-cells = <0>;
 //            bindings
@@ -197,7 +197,7 @@
 //                , <&macro_tap &kp KP_N0 KP_N2 KP_N1 KP_N4>
 //                , <&macro_release &kp LALT>;
 //        };
-//        umu_u: umu_u {  // uppercase
+//        umu_u: umlaut_u_uppercase {  // uppercase
 //            compatible = "zmk,behavior-macro";
 //            #binding-cells = <0>;
 //            bindings
