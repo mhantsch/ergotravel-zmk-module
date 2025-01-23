@@ -386,7 +386,7 @@
             >;
         };
 
-        altgr_layer { // Layer 1%
+        altgrshift_layer { // Layer 1%
             display-name = "AltGrShift";
     
             bindings = <
