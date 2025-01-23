@@ -22,7 +22,8 @@
 #define MSE 11      // Mouse
 #define NSP 12      // NumSpace
 #define NTB 13      // NumTab
-#define AGR 14      // AltGr (for Windows)
+#define AGR 14      // AltGr (for Windows Umlauts via Alt+Numpad)
+#define AGS 15      // AltGr+Shift (for Windows uppercase Umlauts via Alt+Numpad)
 
 &lt {
     quick-tap-ms = <200>;
@@ -379,10 +380,10 @@
             display-name = "AltGr";
     
             bindings = <
-                &kp TAB   &uml_a   &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &uml_u   &uml_o    &kp BSPC
-                &kp CAPS  &kp A    &kp S    &uml_sz  &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
-                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
-                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
+                &kp TAB        &uml_a   &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &uml_u   &uml_o    &kp BSPC
+                &kp CAPS       &kp A    &kp S    &uml_sz  &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
+                &hll AGS LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
+                &kp LCTRL      &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
             >;
         };
 
