@@ -206,6 +206,18 @@
                 , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>
                 , <&macro_release &kp LALT>;
         };
+        lsz: layer_tap_sz {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
+            bindings = <&mo>, <&uml_sz>;
+//            hold-trigger-key-positions = <0 1 2 3 4 5 6 15 16 17 18 19 20 28 29 30 31 32 33 42 43 44 45 46 47>;
+            // these are all the left-side buttons
+            hold-trigger-on-release;
+        };
     };
 
     keymap {
@@ -248,10 +260,10 @@
 //            display-name = "Colemak-HRM";
 //
 //            bindings = <
-//                &kp TAB      &kp Q      &kp W      &kp F       &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L       &kp U       &kp Y      &kp SEMI   &kp BSPC
-//                &lt MAX BSPC &hl LALT A &hl RALT R &hl LSHFT S &hl LCTRL T &hl LGUI D    &kp LBKT                 &kp RBKT  &hr RGUI H    &hr RCTRL N &hr RSHFT E &hr RALT I &hr LALT O &kp APOS
-//                &kp LSHFT    &kp Z      &kp X      &kp C       &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M       &kp COMMA   &kp DOT    &kp SLASH  &mt RSHFT ENTER
-//                &kp LCTRL    &kp LGUI   &kp LALT   &mo ADJ     &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE     &mo FUN     &kp RALT   &kp RGUI   &mt RCTRL ENTER
+//                &kp TAB      &kp Q       &kp W       &kp F        &kp P        &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L        &kp U        &kp Y       &kp SEMI    &kp BSPC
+//                &lt MAX BSPC &hml LALT A &hml RALT R &hml LSHFT S &hml LCTRL T &hml LGUI D   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL N &hmr RSHFT E &hmr RALT I &hmr LALT O &kp APOS
+//                &kp LSHFT    &kp Z       &kp X       &kp C        &kp V        &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M        &kp COMMA    &kp DOT     &kp SLASH   &mt RSHFT ENTER
+//                &kp LCTRL    &kp LGUI    &kp LALT    &mo ADJ      &lt LOW TAB  &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE      &mo FUN      &kp RALT    &kp RGUI    &mt RCTRL ENTER
 //            >;
 //        };
 //
@@ -380,10 +392,10 @@
             display-name = "AltGr";
     
             bindings = <
-                &kp TAB        &uml_a   &kp W    &kp E    &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &uml_u   &uml_o    &kp BSPC
-                &kp CAPS       &kp A    &kp S    &uml_sz  &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
-                &hll AGS LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT
-                &kp LCTRL      &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
+                &kp TAB       &uml_a   &kp W    &kp E      &kp R    &kp T     &kp MINUS   &kp EQUAL   &kp Y     &kp U     &kp I     &uml_u   &uml_o    &kp BSPC
+                &kp CAPS      &kp A    &kp S    &lsz AGS 0 &kp F    &kp G     &kp LBKT    &kp RBKT    &kp H     &kp J     &lt AGS K &kp L    &kp SEMI  &kp APOS
+                &lt AGS LSHFT &kp Z    &kp X    &kp C      &kp V    &kp B     &kp SPACE   &kp SPACE   &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &lt AGS RSHFT
+                &kp LCTRL     &kp LGUI &kp LALT &mo ADJ    &mo LOW  &kp SPACE &none       &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &kp RCTRL
             >;
         };
 
