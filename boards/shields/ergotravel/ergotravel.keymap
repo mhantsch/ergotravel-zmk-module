@@ -147,7 +147,7 @@
             bindings = <&kp ENTER>;
         };
     };
-actually
+
     macros {
         uml_a: umlaut_a {
             compatible = "zmk,behavior-macro";
