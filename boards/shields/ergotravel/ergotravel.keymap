@@ -21,7 +21,7 @@
 #define MAX 10      // Maxtend
 #define MSE 11      // Mouse
 #define NSP 12      // NumSpace
-#define NTB 13      // NumTab
+#define NTB 13      // NumTab (currently unused)
 #define AGR 14      // AltGr (for Windows Umlauts via Alt+Numpad)
 #define AGS 15      // AltGr+Shift (for Windows uppercase Umlauts via Alt+Numpad)
 
@@ -36,7 +36,8 @@
 
 / {
 
-// This keymap has a distinct ADJUST button, so tri-layer functionality is not needed, and actually doesn't seem to work anyway.
+// This keymap has a distinct ADJUST button, so tri-layer functionality (LOWER + RAISE => ADJUST) is not needed, 
+// and actually prevents activating the layer using only the ADJUST button.
 //
 //    conditional_layers {
 //        compatible = "zmk,conditional-layers";
@@ -56,7 +57,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hml: homerow_mod_left {
+        hml: hrmod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -70,7 +71,7 @@
             hold-trigger-on-release;
         };
 
-        hmr: homerow_mod_right {
+        hmr: hrmod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -83,7 +84,7 @@
             hold-trigger-on-release;
         };
 
-        hll: homerow_layer_left {
+        hll: hrlayer_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -97,7 +98,7 @@
             hold-trigger-on-release;
         };
 
-        hlr: homerow_layer_right {
+        hlr: hrlayer_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -107,6 +108,19 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 6 15 16 17 18 19 20 28 29 30 31 32 33 42 43 44 45 46 47>;
             // these are all the left-side buttons
+            hold-trigger-on-release;
+        };
+        lsz: layer_tap_sz {     // hold for momentary layer, tap for umlaut_sz macro.
+                                // pass two parameters to this behaviour:
+                                // - number of layer to activate for momentary layer functionality
+                                // - second parameter will be ignored (e.g. just pass number 0), it will always tap &uml_sz macro
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
+            bindings = <&mo>, <&uml_sz>;
             hold-trigger-on-release;
         };
     };
@@ -119,28 +133,28 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_esc_q_w {
             require-prior-idle-ms = <100>;
             timeout-ms = <100>;
             key-positions = <1 2>;
             layers = <QTY QTY_HR CMK CMK_HR CMR TRN>;
             bindings = <&kp ESC>;
         };
-        combo_esc2 {
+        combo_esc_tab_q {
             require-prior-idle-ms = <100>;
             timeout-ms = <100>;
             key-positions = <0 1>;
             layers = <QTY QTY_HR CMK CMK_HR CMR TRN>;
             bindings = <&kp ESC>;
         };
-        combo_enter {
+        combo_enter_o_apos {
             require-prior-idle-ms = <100>;
             timeout-ms = <100>;
             key-positions = <26 27>;
             layers = <QTY QTY_HR CMK CMK_HR CMR TRN LOW RSE>;
             bindings = <&kp ENTER>;
         };
-        combo_enter2 {
+        combo_enter_n_e_i {
             require-prior-idle-ms = <100>;
             timeout-ms = <100>;
             key-positions = <23 24 25>;
@@ -205,18 +219,6 @@
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>
                 , <&macro_release &kp LALT>;
-        };
-        lsz: layer_tap_sz {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
-            bindings = <&mo>, <&uml_sz>;
-//            hold-trigger-key-positions = <0 1 2 3 4 5 6 15 16 17 18 19 20 28 29 30 31 32 33 42 43 44 45 46 47>;
-            // these are all the left-side buttons
-            hold-trigger-on-release;
         };
     };
 
@@ -377,7 +379,7 @@
             >;
         };
 
-        numtab_layer { // Layer 13
+        numtab_layer { // Layer 13 (currently unused)
             display-name = "NumTab";
     
             bindings = <
@@ -390,7 +392,7 @@
 
         // The following two layers generate Colemak AltGr and Colemak AltGr-Shift international characters using Windows Alt+Numpad keystrokes.
         // Each key needs to be bound to a macro that sends the Alt+Numpad scancodes. You'll need lots of macros for this.
-        // At the moment, only German Umlauts äöüß and shifted German Umlauts ÄÖÜ have been created.
+        // At the moment, only German Umlauts äöü, shifted German Umlauts ÄÖÜ and German "scharfes S" ß have been created.
         // ß (rewritten as "sz" in ASCII) has a very special binding because it functions as a layer shift when held, but needs to call
         // the uml_sz macro when tapped.
 
