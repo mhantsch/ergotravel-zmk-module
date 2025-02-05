@@ -7,3 +7,5 @@ The keymap implements my [Colemax-Maxtend](https://github.com/mhantsch/maxtend) 
 This config supports [ZMK Studio](https://github.com/zmkfirmware/zmk-studio).
 
 ![ErgoTravel-photo](https://github.com/user-attachments/assets/8c9acf2d-8dba-45a8-9c75-3c9e0b6271ec)
+
+![Screenshot 2025-02-05 123316](https://github.com/user-attachments/assets/f416ba56-a1ce-4530-b68c-5d1c4d08c8b9)
