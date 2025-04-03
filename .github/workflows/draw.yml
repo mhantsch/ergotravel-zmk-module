@@ -4,8 +4,7 @@ on:
   push:
     paths:
       - "boards/**"
-      - "boards/shields/**"
-      - "boards/shields/ergotravel/**"
+      - "config/**"
       - .github/workflows/draw.yml
       - keymap_drawer.config.yaml
 
