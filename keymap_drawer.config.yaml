@@ -118,6 +118,9 @@ parse_config:
 
   raw_binding_map:
     # Layers
+    "&mup LC(SPACE) LC(LS(M))":
+      tap:  $$mdi:keyboard-space$$
+      hold: '$$mdi:navigation-variant$$'
     "&ltq 1 BACKSPACE":
       tap:  $$mdi:backspace$$
       hold: '$$mdi:navigation-variant$$'
