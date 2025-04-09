@@ -79,4 +79,16 @@
     //        positions = <>;
     //    };
     // };
+
+    position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        complete;
+
+        physical_layout0 {
+            physical-layout = <&physical_layout0>;
+            positions = <>;
+        };
+    };
+
 };
