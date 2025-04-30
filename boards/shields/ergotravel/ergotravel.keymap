@@ -161,9 +161,23 @@
             layers = <QTY QTY_HR CMK CMK_HR CMR TRN LOW RSE>;
             bindings = <&kp ENTER>;
         };
+        combo_blockquote_esc_tab_q {
+            require-prior-idle-ms = <100>;
+            timeout-ms = <100>;
+            key-positions = <0 1>;
+            layers = <RSE FUN NSP>;
+            bindings = <&blockquote>;
+        };
     };
 
     macros {
+        blockquote: blockquote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE &kp ENTER &kp ENTER &kp GRAVE &kp GRAVE &kp GRAVE &kp ENTER>
+                , <&macro_tap &kp UP &kp UP>;
+        };
         uml_a: umlaut_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
