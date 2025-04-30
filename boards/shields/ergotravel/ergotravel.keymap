@@ -230,7 +230,7 @@
 
             bindings = <
                 &kp TAB      &kp Q    &kp W    &kp E    &kp R       &kp T         &kp MINUS                &kp EQUAL &kp Y         &kp U     &kp I     &kp O    &kp P     &kp BSPC
-                &lt MAX BSPC &kp A    &kp S    &kp D    &kp F       &kp G         &kp LBKT                 &kp RBKT  &kp H         &kp J     &kp K     &kp L    &kp SEMI  &kp APOS
+                &lt MAX BSPC &kp A    &kp S    &kp D    &kp F       &kp G         &kp LBKT                 &kp RBKT  &kp H         &kp J     &kp K     &kp L    &kp SEMI  &lt MAX APOS
                 &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp N         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
@@ -241,7 +241,7 @@
 
             bindings = <
                 &kp TAB      &kp Q       &kp W       &kp E        &kp R        &kp T         &kp MINUS                &kp EQUAL &kp Y         &kp U        &kp I        &kp O       &kp P          &kp BSPC
-                &lt MAX BSPC &hml LALT A &hml RALT S &hml LSHFT D &hml LCTRL F &hml LGUI G   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL J &hmr RSHFT K &hmr RALT L &hmr LALT SEMI &kp APOS
+                &lt MAX BSPC &hml LALT A &hml RALT S &hml LSHFT D &hml LCTRL F &hml LGUI G   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL J &hmr RSHFT K &hmr RALT L &hmr LALT SEMI &lt MAX APOS
                 &kp LSHFT    &kp Z       &kp X       &kp C        &kp V        &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp N         &kp M        &kp COMMA    &kp DOT     &kp SLASH      &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI    &kp LALT    &mo ADJ      &lt LOW TAB  &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE      &mo FUN      &kp RALT    &kp RGUI       &mt RCTRL ENTER
             >;
@@ -252,7 +252,7 @@
     
             bindings = <
                 &kp TAB      &kp Q    &kp W    &kp F    &kp P       &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L     &kp U     &kp Y    &kp SEMI  &kp BSPC
-                &lt MAX BSPC &kp A    &kp R    &kp S    &kp T       &kp D         &kp LBKT                 &kp RBKT  &kp H         &kp N     &kp E     &kp I    &kp O     &kp APOS
+                &lt MAX BSPC &kp A    &kp R    &kp S    &kp T       &kp D         &kp LBKT                 &kp RBKT  &kp H         &kp N     &kp E     &kp I    &kp O     &lt MAX APOS
                 &kp LSHFT    &kp Z    &kp X    &kp C    &kp V       &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &lt LOW TAB &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
@@ -263,7 +263,7 @@
 //
 //            bindings = <
 //                &kp TAB      &kp Q       &kp W       &kp F        &kp P        &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L        &kp U        &kp Y       &kp SEMI    &kp BSPC
-//                &lt MAX BSPC &hml LALT A &hml RALT R &hml LSHFT S &hml LCTRL T &hml LGUI D   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL N &hmr RSHFT E &hmr RALT I &hmr LALT O &kp APOS
+//                &lt MAX BSPC &hml LALT A &hml RALT R &hml LSHFT S &hml LCTRL T &hml LGUI D   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL N &hmr RSHFT E &hmr RALT I &hmr LALT O &lt MAX APOS
 //                &kp LSHFT    &kp Z       &kp X       &kp C        &kp V        &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M        &kp COMMA    &kp DOT     &kp SLASH   &mt RSHFT ENTER
 //                &kp LCTRL    &kp LGUI    &kp LALT    &mo ADJ      &lt LOW TAB  &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE      &mo FUN      &kp RALT    &kp RGUI    &mt RCTRL ENTER
 //            >;
@@ -274,20 +274,20 @@
 
             bindings = <
                 &kp TAB      &kp Q       &kp W      &kp F        &kp P        &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L        &kp U        &kp Y       &kp SEMI    &kp BSPC
-                &lt MAX BSPC &hml LALT A &hll AGR R &hml LSHFT S &hml LCTRL T &hml LGUI D   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL N &hmr RSHFT E &hlr AGR I  &hmr LALT O &kp APOS
+                &lt MAX BSPC &hml LALT A &hll AGR R &hml LSHFT S &hml LCTRL T &hml LGUI D   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL N &hmr RSHFT E &hlr AGR I  &hmr LALT O &lt MAX APOS
                 &kp LSHFT    &kp Z       &kp X      &kp C        &kp V        &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M        &kp COMMA    &kp DOT     &kp SLASH   &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI    &kp LALT   &mo ADJ      &lt LOW TAB  &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE      &mo FUN      &kp RALT    &kp RGUI    &mt RCTRL ENTER
             >;
         };
 
-        revmak_hr_layer { // Layer 4
+        revmak_layer { // Layer 4
             display-name = "Colemak-reversed";
     
             bindings = <
-                &kp TAB   &kp Q    &kp W    &kp K    &kp S    &kp F     &kp MINUS     &kp EQUAL   &kp O     &kp I     &kp L     &kp SEMI &kp R     &kp BSPC  
-                &kp CAPS  &kp A    &kp D    &kp G    &kp E    &kp T     &kp LBKT      &kp RBKT    &kp H     &kp Y     &kp N     &kp U    &kp P     &kp APOS  
-                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B     &kp LC(SPACE) &kp SPACE   &kp J     &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
-                &kp LCTRL &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none         &none       &kp SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
+                &kp TAB      &kp Q    &kp W    &kp K    &kp S    &kp F     &kp MINUS     &kp EQUAL   &kp O         &kp I     &kp L     &kp SEMI &kp R     &kp BSPC  
+                &lt MAX BSPC &kp A    &kp D    &kp G    &kp E    &kp T     &kp LBKT      &kp RBKT    &kp H         &kp Y     &kp N     &kp U    &kp P     &lt MAX APOS  
+                &kp LSHFT    &kp Z    &kp X    &kp C    &kp V    &kp B     &kp LC(SPACE) &kp SPACE   &kp J         &kp M     &kp COMMA &kp DOT  &kp SLASH &mt RSHFT ENTER
+                &kp LCTRL    &kp LGUI &kp LALT &mo ADJ  &mo LOW  &kp SPACE &none         &none       &lt NSP SPACE &mo RSE   &mo FUN   &kp RALT &kp RGUI  &mt RCTRL ENTER
             >;
         };
 
