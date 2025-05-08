@@ -925,3 +925,6 @@ combos:
 - p: [23, 24, 25]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [QWERTY, QWERTY-HRM, Colemak, Colemak-HRM, Colemak-reversed, QWERTY (base), Lower, Raise]
+- p: [0, 1]
+  k: '&blockquote'
+  l: [Raise, Fun/Media, NumSpace]
