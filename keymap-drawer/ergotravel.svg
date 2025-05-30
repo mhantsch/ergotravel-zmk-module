@@ -3821,9 +3821,8 @@ rect.held, rect.combo.held {
 <g transform="translate(273, 210) rotate(15.0)" class="key keypos-46">
 <rect rx="6" ry="6" x="-33" y="-26" width="66" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-27" y="-24" width="54" height="40" class="key"/>
-<a href="#Lower">
-<text x="0" y="-4" class="key tap layer-activator">Lower</text>
-</a></g>
+<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-tab"/>
+</g>
 <g transform="translate(340, 230) rotate(30.0)" class="key enter keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key enter side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key enter"/>
@@ -4070,7 +4069,8 @@ rect.held, rect.combo.held {
 <g transform="translate(308, 154)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">B</text>
+<use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-space"/>
+<use href="#mdi:navigation-variant" xlink:href="#mdi:navigation-variant" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:navigation-variant"/>
 </g>
 <g transform="translate(368, 182) rotate(30.0)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>

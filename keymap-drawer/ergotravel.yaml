@@ -617,7 +617,7 @@ layers:
   - LGUI
   - $$mdi:apple-keyboard-option$$
   - Adjust
-  - Lower
+  - Alt+$$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -661,7 +661,7 @@ layers:
   - Ctl+Sft+X
   - Ctl+Sft+C
   - Ctl+Sft+V
-  - B
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:navigation-variant$$'}
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
   - N
