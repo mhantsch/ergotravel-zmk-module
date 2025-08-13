@@ -344,7 +344,7 @@
             bindings = <
                 &kp LA(TAB) &to QTY      &to QTY_HR     &to CMK      &to CMK_HR   &to CMR       &to TRN     &kp EQUAL   &trans    &trans    &trans    &trans         &trans     &kp LC(LA(DEL))
                 &kp DEL     &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp LBKT    &kp RBKT    &trans    &trans    &trans    &trans         &trans     &trans
-                &trans      &bt BT_CLR   &bt BT_CLR_ALL &out OUT_USB &out OUT_BLE &out OUT_TOG  &kp SPACE   &kp SPACE   &trans    &trans    &trans    &trans         &trans     &trans
+                &trans      &bt BT_CLR   &bt BT_CLR     &out OUT_USB &out OUT_BLE &out OUT_TOG  &kp SPACE   &kp SPACE   &trans    &trans    &trans    &trans         &trans     &trans
                 &bootloader &sys_reset   &studio_unlock &trans       &trans       &trans        &none       &none       &trans    &trans    &trans    &studio_unlock &sys_reset &bootloader
             >;
         };
