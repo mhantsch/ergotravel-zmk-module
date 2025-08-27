@@ -664,7 +664,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:navigation-variant$$'}
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
-  - N
+  - Ctl+Sft+N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
