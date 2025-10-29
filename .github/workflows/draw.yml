@@ -13,7 +13,8 @@ jobs:
     permissions:
       contents: write
     with:
-      keymap_patterns: "boards/shields/ergotravel/*.keymap"
+      # uncomment the following line only if you want to draw the default keymap from boards/**
+      #keymap_patterns: "boards/shields/ergotravel/*.keymap"
       commit_message: "[Draw] ${{ github.event.head_commit.message }}"
       destination: "commit"
       fail_on_error: ${{ fromJSON(true) }}
