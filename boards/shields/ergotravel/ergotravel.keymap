@@ -342,10 +342,10 @@
             display-name = "Adjust";
     
             bindings = <
-                &kp LA(TAB) &to QTY      &to QTY_HR     &to CMK      &to CMK_HR   &to CMR       &to TRN     &kp EQUAL   &trans    &trans    &trans    &trans         &trans     &kp LC(LA(DEL))
-                &kp DEL     &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp LBKT    &kp RBKT    &trans    &trans    &trans    &trans         &trans     &trans
-                &trans      &bt BT_CLR   &bt BT_CLR     &out OUT_USB &out OUT_BLE &out OUT_TOG  &kp SPACE   &kp SPACE   &trans    &trans    &trans    &trans         &trans     &trans
-                &bootloader &sys_reset   &studio_unlock &trans       &trans       &trans        &none       &none       &trans    &trans    &trans    &studio_unlock &sys_reset &bootloader
+                &kp LA(TAB) &to QTY      &to QTY_HR     &to CMK      &to CMK_HR   &to CMR       &to TRN     &kp EQUAL   &trans      &trans     &trans         &trans         &trans     &kp LC(LA(DEL))
+                &kp DEL     &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp LBKT    &kp RBKT    &trans      &trans     &trans         &trans         &trans     &trans
+                &trans      &bt BT_CLR   &bt BT_CLR     &out OUT_USB &out OUT_BLE &out OUT_TOG  &kp SPACE   &kp SPACE   &trans      &trans     &trans         &trans         &trans     &trans
+                &bootloader &sys_reset   &studio_unlock &trans       &sys_reset   &bootloader   &none       &none       &bootloader &sys_reset &studio_unlock &studio_unlock &sys_reset &bootloader
             >;
         };
 
@@ -354,10 +354,10 @@
     
             // &kp LC(LS(N)) will actually produce LC(LS(K)) on a Colemak host map - "raise hand" in MS Teams
             bindings = <
-                &kp TAB   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &trans      &trans      &trans        &kp C_PP                 &kp C_VOL_UP &kp PSCRN      &kp SLCK  &kp PAUSE_BREAK
-                &kp CAPS  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &trans      &trans      &trans        &kp C_PREV               &kp C_VOL_DN &kp C_NEXT     &trans    &trans
-                &trans    &kp F11  &kp F12  &trans   &trans   &trans    &kp SPACE   &kp SPACE   &kp LC(LS(N)) &mup LC(SPACE) LC(LS(M)) &kp C_MUTE   &trans         &trans    &trans
-                &trans    &trans   &trans   &trans   &trans   &kp SPACE &none       &none       &kp SPACE     &trans                   &trans       &studio_unlock &trans    &trans
+                &kp TAB   &kp F1   &kp F2   &kp F3         &kp F4     &kp F5      &trans      &trans      &trans        &kp C_PP                 &kp C_VOL_UP &kp PSCRN      &kp SLCK  &kp PAUSE_BREAK
+                &kp CAPS  &kp F6   &kp F7   &kp F8         &kp F9     &kp F10     &trans      &trans      &trans        &kp C_PREV               &kp C_VOL_DN &kp C_NEXT     &trans    &trans
+                &trans    &kp F11  &kp F12  &trans         &trans     &trans      &kp SPACE   &kp SPACE   &kp LC(LS(N)) &mup LC(SPACE) LC(LS(M)) &kp C_MUTE   &trans         &trans    &trans
+                &trans    &trans   &trans   &studio_unlock &sys_reset &bootloader &none       &none       &bootloader   &sys_reset               &trans       &studio_unlock &trans    &trans
             >;
         };
 
