@@ -1,62 +1,5 @@
 layout: {zmk_keyboard: ergotravel}
 layers:
-  QWERTY:
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - {t: '-', s: _}
-  - {t: '=', s: +}
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:backspace$$', h: Maxtend}
-  - A
-  - S
-  - D
-  - F
-  - G
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
-  - {t: ., h: Maxtend}
-  - $$mdi:apple-keyboard-shift$$
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:navigation-variant$$'}
-  - $$mdi:keyboard-space$$
-  - N
-  - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:apple-keyboard-control$$
-  - LGUI
-  - $$mdi:apple-keyboard-option$$
-  - Adjust
-  - {t: '$$mdi:keyboard-tab$$', h: Lower}
-  - {t: '$$mdi:keyboard-space$$', h: Mouse}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:keyboard-space$$', h: NumSpace}
-  - Raise
-  - Fun/Media
-  - $$mdi:apple-keyboard-option$$
-  - RGUI
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   QWERTY-HRM:
   - $$mdi:keyboard-tab$$
   - Q
@@ -114,34 +57,34 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - RGUI
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
-  Colemak:
+  QWERTY:
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - F
-  - P
-  - G
+  - E
+  - R
+  - T
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - J
-  - L
-  - U
   - Y
-  - {t: ;, s: ':'}
+  - U
+  - I
+  - O
+  - P
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:backspace$$', h: Maxtend}
   - A
-  - R
   - S
-  - T
   - D
+  - F
+  - G
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - H
-  - N
-  - E
-  - I
-  - O
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
   - {t: ., h: Maxtend}
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -151,7 +94,7 @@ layers:
   - B
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:navigation-variant$$'}
   - $$mdi:keyboard-space$$
-  - K
+  - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
@@ -199,6 +142,63 @@ layers:
   - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: I, h: AltGr}
   - {t: O, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ., h: Maxtend}
+  - $$mdi:apple-keyboard-shift$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:navigation-variant$$'}
+  - $$mdi:keyboard-space$$
+  - K
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:apple-keyboard-control$$
+  - LGUI
+  - $$mdi:apple-keyboard-option$$
+  - Adjust
+  - {t: '$$mdi:keyboard-tab$$', h: Lower}
+  - {t: '$$mdi:keyboard-space$$', h: Mouse}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:keyboard-space$$', h: NumSpace}
+  - Raise
+  - Fun/Media
+  - $$mdi:apple-keyboard-option$$
+  - RGUI
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
+  Colemak:
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - {t: '-', s: _}
+  - {t: '=', s: +}
+  - J
+  - L
+  - U
+  - Y
+  - {t: ;, s: ':'}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace$$', h: Maxtend}
+  - A
+  - R
+  - S
+  - T
+  - D
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - H
+  - N
+  - E
+  - I
+  - O
   - {t: ., h: Maxtend}
   - $$mdi:apple-keyboard-shift$$
   - Z
