@@ -3,6 +3,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+// add anti-idle-mode
+#include <behaviors/anti_idle_mode.dtsi>
+#include <dt-bindings/anti_idle_mode.h>
+
+// add pointing/mouse support
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 
 #include <dt-bindings/zmk/pointing.h>
@@ -24,6 +29,7 @@
 #define NTB 13      // NumTab (currently unused)
 #define AGR 14      // AltGr (for Windows Umlauts via Alt+Numpad)
 #define AGS 15      // AltGr+Shift (for Windows uppercase Umlauts via Alt+Numpad)
+#define AJ2 16      // Adjust 2 = Adjust+LShift (additional control functions)
 
 &lt {
     quick-tap-ms = <200>;
@@ -35,6 +41,15 @@
 };
 
 / {
+    // configure anti-idle.
+    // in the keymap, bind &aim AIM_ON, &aim AIM_OFF, or &aim AIM_TOG to keys as desired.
+    anti_idle {
+        compatible = "zmk,anti-idle-generic";
+        interval-ms = <9000>; // How often to send actions (ms)
+        bindings = <&mmv MOVE_DOWN &mmv MOVE_UP>; // Actions to perform (e.g., mouse move)
+        tap_ms = <40>;   // Duration of each action (ms)
+        wait_ms = <400>; // Delay between actions (ms)
+    };
 
 // This keymap has a distinct ADJUST button, so tri-layer functionality (LOWER + RAISE => ADJUST) is not needed, 
 // and actually prevents activating the layer using only the ADJUST button.
@@ -311,7 +326,7 @@
             bindings = <
                 &kp ESC   &kp F1   &kp F2   &kp F3        &kp F4   &kp F5    &trans      &trans      &kp KP_SLASH    &kp KP_N7 &kp KP_N8  &kp KP_N9    &kp KP_MINUS &kp BSPC
                 &trans    &kp F6   &kp F7   &kp F8        &kp F9   &kp F10   &trans      &trans      &kp KP_ASTERISK &kp KP_N4 &kp KP_N5  &kp KP_N6    &kp KP_PLUS  &kp KP_ENTER
-                &trans    &kp F11  &kp F12  &kp C_AL_CALC &none    &kp SEMI  &kp KP_NLCK &kp SPACE   &kp COLON       &kp KP_N1 &kp KP_N2  &kp KP_N3    &kp EQUAL    &trans
+                &trans    &kp F11  &kp F12  &kp C_AL_CALC &none    &kp P     &kp KP_NLCK &kp SPACE   &kp LS(P)       &kp KP_N1 &kp KP_N2  &kp KP_N3    &kp EQUAL    &trans
                 &trans    &trans   &trans   &trans        &trans   &kp SPACE &none       &none       &kp SPACE       &kp KP_N0 &kp KP_DOT &kp COMMA    &none        &trans
             >;
         };
@@ -327,13 +342,13 @@
             >;
         };
 
-        adjust_layer { // Layer 8 - keymap selection, bluetooth profile, output port
+        adjust_layer { // Layer 8 - keymap selection, bluetooth profile, output port, anti-idle mode, reboot, studio, and bootloader
             display-name = "Adjust";
     
             bindings = <
                 &kp LA(TAB) &to QTY      &to QTY_HR     &to CMK      &to CMK_HR   &to CMR       &to TRN     &kp EQUAL   &trans      &trans     &trans         &trans         &trans     &kp LC(LA(DEL))
                 &kp DEL     &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp LBKT    &kp RBKT    &trans      &trans     &trans         &trans         &trans     &trans
-                &trans      &bt BT_CLR   &bt BT_CLR     &out OUT_USB &out OUT_BLE &out OUT_TOG  &kp SPACE   &kp SPACE   &trans      &trans     &trans         &trans         &trans     &trans
+                &mo AJ2     &none        &out OUT_TOG   &out OUT_USB &out OUT_BLE &aim AIM_TOG  &kp SPACE   &kp SPACE   &trans      &trans     &trans         &trans         &trans     &trans
                 &bootloader &sys_reset   &studio_unlock &trans       &sys_reset   &bootloader   &none       &none       &bootloader &sys_reset &studio_unlock &studio_unlock &sys_reset &bootloader
             >;
         };
@@ -422,5 +437,15 @@
             >;
         };
 
+        adjust2_layer { // Layer 16 - additional adjust functions
+            display-name = "Adjust 2";
+    
+            bindings = <
+                &none       &to QTY       &to QTY_HR     &to CMK       &to CMK_HR    &to CMR         &to TRN     &kp EQUAL   &trans      &trans     &trans         &trans         &trans     &kp LC(LA(DEL))
+                &kp DEL     &bt BT_DISC 0 &bt BT_DISC 1  &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &kp LBKT    &kp RBKT    &trans      &trans     &trans         &trans         &trans     &trans
+                &trans      &bt BT_CLR    &bt BT_CLR_ALL &out OUT_USB  &out OUT_BLE  &aim AIM_OFF    &kp SPACE   &kp SPACE   &trans      &trans     &trans         &trans         &trans     &trans
+                &bootloader &sys_reset    &studio_unlock &trans        &sys_reset    &bootloader     &none       &none       &bootloader &sys_reset &studio_unlock &studio_unlock &sys_reset &bootloader
+            >;
+        };
     };
 };
