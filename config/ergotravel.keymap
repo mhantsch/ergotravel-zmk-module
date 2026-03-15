@@ -47,8 +47,8 @@
         compatible = "zmk,anti-idle-generic";
         interval-ms = <9000>; // How often to send actions (ms)
         bindings = <&mmv MOVE_DOWN &mmv MOVE_UP>; // Actions to perform (e.g., mouse move)
-        tap_ms = <40>;   // Duration of each action (ms)
-        wait_ms = <400>; // Delay between actions (ms)
+        tap_ms = <200>;   // Duration of each action (ms)
+        wait_ms = <600>; // Delay between actions (ms)
     };
 
 // This keymap has a distinct ADJUST button, so tri-layer functionality (LOWER + RAISE => ADJUST) is not needed, 
