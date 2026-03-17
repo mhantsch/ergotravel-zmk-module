@@ -82,7 +82,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 36 37 38 39 40 41 46 50 51 52 53 54 55>;
             // these are all the right-side buttons
-            // left-side thumb button for LOW/TAB also included, allowing Alt-TAB with left hand without tapping-term-ms delay.
+            // left-side thumb button for LOW/TAB also included (46), allowing Alt-TAB with left hand without tapping-term-ms delay.
             hold-trigger-on-release;
         };
 
