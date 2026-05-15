@@ -254,7 +254,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        qwerty_layer { // Layer 0 (default)
+        qwerty_hr_layer { // Layer 0 (default)
             display-name = "QWERTY-HRM";
 
             bindings = <
@@ -265,7 +265,7 @@
             >;
         };
 
-        qwerty_hr_layer { // Layer 1
+        qwerty_layer { // Layer 1
             display-name = "QWERTY";
 
             bindings = <
@@ -276,7 +276,7 @@
             >;
         };
 
-        colemak_layer { // Layer 2
+        colemak_hr_layer { // Layer 2
             display-name = "Colemak-HRM";
 
             bindings = <
@@ -287,7 +287,7 @@
             >;
         };
 
-        colemak_hr_layer { // Layer 3
+        colemak_layer { // Layer 3
             display-name = "Colemak";
     
             bindings = <
