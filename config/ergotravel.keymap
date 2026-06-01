@@ -259,7 +259,7 @@
 
             bindings = <
                 &kp TAB      &kp Q       &kp W       &kp E        &kp R        &kp T         &kp MINUS                &kp EQUAL &kp Y         &kp U        &kp I        &kp O       &kp P          &kp BSPC
-                &lt MAX BSPC &hml LALT A &hml RALT S &hml LSHFT D &hml LCTRL F &hml LGUI G   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL J &hmr RSHFT K &hmr RALT L &hmr LALT SEMI &lt MAX APOS
+                &lt MAX BSPC &hml LALT A &hml RALT S &hml LSHFT D &hml LCTRL F &hml LGUI G   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr LCTRL J &hmr RSHFT K &hmr RALT L &hmr LALT SEMI &lt MAX APOS
                 &kp LSHFT    &kp Z       &kp X       &kp C        &kp V        &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp N         &kp M        &kp COMMA    &kp DOT     &kp SLASH      &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI    &kp LALT    &mo ADJ      &lt LOW TAB  &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE      &mo FUN      &kp RALT    &kp RGUI       &mt RCTRL ENTER
             >;
@@ -281,7 +281,7 @@
 
             bindings = <
                 &kp TAB      &kp Q       &kp W      &kp F        &kp P        &kp G         &kp MINUS                &kp EQUAL &kp J         &kp L        &kp U        &kp Y       &kp SEMI    &kp BSPC
-                &lt MAX BSPC &hml LALT A &hll AGR R &hml LSHFT S &hml LCTRL T &hml LGUI D   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr RCTRL N &hmr RSHFT E &hlr AGR I  &hmr LALT O &lt MAX APOS
+                &lt MAX BSPC &hml LALT A &hll AGR R &hml LSHFT S &hml LCTRL T &hml LGUI D   &kp LBKT                 &kp RBKT  &hmr RGUI H   &hmr LCTRL N &hmr RSHFT E &hlr AGR I  &hmr LALT O &lt MAX APOS
                 &kp LSHFT    &kp Z       &kp X      &kp C        &kp V        &kp B         &mup LC(SPACE) LC(LS(M)) &kp SPACE &kp K         &kp M        &kp COMMA    &kp DOT     &kp SLASH   &mt RSHFT ENTER
                 &kp LCTRL    &kp LGUI    &kp LALT   &mo ADJ      &lt LOW TAB  &lt MSE SPACE &none                    &none     &lt NSP SPACE &mo RSE      &mo FUN      &kp RALT    &kp RGUI    &mt RCTRL ENTER
             >;
@@ -369,10 +369,10 @@
             display-name = "Maxtend";
 
             bindings = <
-                &kp TAB   &kp ESC   &msc SCRL_UP   &kp C_AC_BACK &kp C_AC_FORWARD &trans    &kp MINUS   &kp EQUAL   &kp PG_UP     &kp HOME  &kp UP     &kp END   &kp DEL   &kp INS
-                &trans    &kp LALT  &msc SCRL_DOWN &kp LSHFT     &kp LCTRL        &kp LGUI  &kp LBKT    &kp RBKT    &kp PG_DN     &kp LEFT  &kp DOWN   &kp RIGHT &kp BSPC  &kp ENTER
-                &kp LSHFT &kp LC(Z) &kp LC(X)      &kp LC(C)     &kp LC(V)        &kp LC(B) &kp SPACE   &kp SPACE   &trans        &trans    &trans     &trans    &kp K_APP &kp RSHFT
-                &kp LCTRL &kp LGUI  &kp LALT       &mo ADJ       &kp LA(TAB)      &kp ENTER &none       &none       &kp LC(SPACE) &mo RSE   &mo FUN    &kp RALT  &kp RGUI  &kp RCTRL
+                &kp TAB   &kp ESC   &msc SCRL_UP   &kp C_AC_BACK &kp C_AC_FORWARD &kp KP_NUMLOCK &kp MINUS   &kp EQUAL   &kp PG_UP     &kp HOME  &kp UP     &kp END   &kp DEL   &kp INS
+                &trans    &kp LALT  &msc SCRL_DOWN &kp LSHFT     &kp LCTRL        &kp LGUI       &kp LBKT    &kp RBKT    &kp PG_DN     &kp LEFT  &kp DOWN   &kp RIGHT &kp BSPC  &kp ENTER
+                &kp LSHFT &kp LC(Z) &kp LC(X)      &kp LC(C)     &kp LC(V)        &kp LC(B)      &kp SPACE   &kp SPACE   &trans        &trans    &trans     &kp RCTRL &kp K_APP &kp RSHFT
+                &kp LCTRL &kp LGUI  &kp LALT       &mo ADJ       &kp LA(TAB)      &kp ENTER      &none       &none       &kp LC(SPACE) &mo RSE   &mo FUN    &kp RALT  &kp RGUI  &kp RCTRL
             >;
         };
 
@@ -439,11 +439,11 @@
 
         adjust2_layer { // Layer 16 - additional adjust functions
             display-name = "Adjust 2";
-    
+
             bindings = <
-                &none       &to QTY       &to QTY_HR     &to CMK       &to CMK_HR    &to CMR         &to TRN     &kp EQUAL   &trans      &trans     &trans         &trans         &trans     &kp LC(LA(DEL))
-                &kp DEL     &bt BT_DISC 0 &bt BT_DISC 1  &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &kp LBKT    &kp RBKT    &trans      &trans     &trans         &trans         &trans     &trans
-                &trans      &bt BT_CLR    &bt BT_CLR_ALL &out OUT_USB  &out OUT_BLE  &aim AIM_OFF    &kp SPACE   &kp SPACE   &trans      &trans     &trans         &trans         &trans     &trans
+                &none       &to QTY       &to QTY_HR    &to CMK       &to CMK_HR    &to CMR         &to TRN     &kp EQUAL   &trans      &trans     &trans         &trans         &trans     &bt BT_CLR_ALL
+                &kp DEL     &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &kp LBKT    &kp RBKT    &trans      &trans     &trans         &trans         &trans     &trans
+                &trans      &bt BT_CLR    &bt BT_CLR    &out OUT_USB  &out OUT_BLE  &aim AIM_OFF    &kp SPACE   &kp SPACE   &trans      &trans     &trans         &trans         &trans     &trans
                 &bootloader &sys_reset    &studio_unlock &trans        &sys_reset    &bootloader     &none       &none       &bootloader &sys_reset &studio_unlock &studio_unlock &sys_reset &bootloader
             >;
         };
