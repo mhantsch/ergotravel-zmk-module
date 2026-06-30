@@ -415,11 +415,11 @@ layers:
   - {t: '0', s: )}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:alpha-w-box$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - <
+  - '>'
   - (
   - )
-  - '>'
+  - {t: '-', s: _}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - +
@@ -429,19 +429,19 @@ layers:
   - {t: ']', s: '}'}
   - {t: '`', s: '~'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - '{'
   - '}'
+  - Sft+P
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
   - '~'
   - _
   - '#'
   - NUBS
-  - '|'
   - {t: \, s: '|'}
+  - '|'
   - $$mdi:apple-keyboard-control$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
